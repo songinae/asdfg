@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.thum{ ;opacity: 0.5}
+		.thum:hover{opacity: 1;}
+		.thum{position: absolute;}
+
+				
+
+
+	</style>
+</head>
+<body>
+	<img src="aa.png" class="thum" id="aa" style="position: absolute; left: 0px; top: 0px;">
+	<img src="bb.png" class="thum" id="bb" style="position: absolute; left: 480px; top: 0px;">
+	<img src="cc.png" class="thum" id="cc" style="position: absolute; left: 0px; top: 100px;">
+	<img src="dd.png" class="thum" id="dd" style="position: absolute; left: 0px; top: 700px;">
+	<audio src="a.mp3" id="a" loop></audio>
+	<audio src="b.mp3" id="b" loop></audio>
+	<audio src="c.mp3" id="c" loop></audio>
+
+	<script type="text/javascript">
+		var astate = "off";
+		aa.onclick = function()
+			{
+			if (astate=="off") {a.play(); astate="on";
+				aa.style.opacity = '1'}
+
+			else {a.pause(); astate="off";
+				aa.style.opacity = '0.5'}
+		}
+
+		var bstate = "off";
+
+		bb.onclick = function()
+			{
+			if (bstate=="off") {b.play(); bstate="on";
+				bb.style.opacity = '1'}
+				
+			else {b.pause(); bstate="off";
+				bb.style.opacity = '0.5'}
+		}		
+
+		var cstate = "off";
+		cc.onclick = function()
+			{
+			if (cstate=="off") {c.play(); cstate="on";
+				cc.style.opacity = '1'}
+				
+			else {c.pause(); astate="off";
+				cc.style.opacity = '0.5'}	
+		}			
+	</script>
+</body>
+</html>
